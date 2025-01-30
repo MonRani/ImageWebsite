@@ -5,12 +5,13 @@
     justify-content: center;
     padding: 20px;
     height: 100%; /* Ensure the canvas takes up the full height of its container */
-    overflow-y: auto;
+    overflow: auto; /* Add scrollbars if the canvas is larger than the container */
   }
   
   canvas {
     border: 2px solid black;
-    margin-bottom: 10px;
+    max-width: 100%; /* Ensure the canvas doesn't overflow */
+    max-height: 80vh; /* Limit canvas height */
   }
   
   button {
@@ -27,4 +28,5 @@
   button:hover {
     background-color: darkblue;
   }
+  
   

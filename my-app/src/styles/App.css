@@ -5,14 +5,32 @@
 }
 
 .image-grid-container {
-  flex: 1; /* Take up the top half */
-  overflow-y: auto;
+  flex: 1; /* Take up half the screen */
+  overflow-y: auto; /* Allow scrolling only for the grid if needed */
+  padding: 10px;
 }
 
 .drawing-canvas-container {
-  flex: 1; /* Take up the bottom half */
+  flex: 1; /* Take up the other half of the screen */
   display: flex;
-  justify-content: center; /* Center the canvas horizontally */
-  align-items: center; /* Center the canvas vertically */
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.view-button {
+  margin: 10px auto; /* Center the button horizontally */
+  padding: 8px 12px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  width: auto; /* Ensure the button doesn't span the full width */
+  display: block; /* Center the button */
+}
+
+.view-button:hover {
+  background-color: darkblue;
 }

@@ -106,18 +106,30 @@ function DrawingCanvas({ image }) {
   const [drawing, setDrawing] = useState(false);
   const [strokes, setStrokes] = useState([]);
   const imgRef = useRef(new Image());
+  const scaleFactor = 1.5;
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
     if (imgRef.current.src !== image) {
-      imgRef.current.src = image;
-      imgRef.current.onload = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(imgRef.current, 0, 0, canvas.width, canvas.height);
-      };
-    }
+        imgRef.current.src = image;
+        imgRef.current.onload = () => {
+          // Set canvas dimensions to match the image's natural size, scaled by the factor
+          canvas.width = imgRef.current.naturalWidth * scaleFactor;
+          canvas.height = imgRef.current.naturalHeight * scaleFactor;
+  
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          // Draw the image scaled up
+          ctx.drawImage(
+            imgRef.current,
+            0,
+            0,
+            canvas.width,
+            canvas.height
+          );
+        };
+      }
 
     ctx.lineWidth = 5;
     ctx.strokeStyle = "red";

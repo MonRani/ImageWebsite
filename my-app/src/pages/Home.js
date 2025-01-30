@@ -49,9 +49,9 @@ const Home = () => {
           <p>Select an image to start drawing.</p>
         )}
       </div>
-      <button onClick={() => navigate("/view-drawing")}>
-        View Saved TXT Files as Drawing
-      </button>
+      <button className="view-button" onClick={() => navigate("/view-drawing")}>
+    View text file as drawing
+  </button>
     </div>
   );
 };
