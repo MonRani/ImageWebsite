@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  height: 100vh; /* Make sure the container takes up the full viewport height */
+}
+
+.image-grid-container {
+  flex: 1; /* Take up the top half */
+  overflow-y: auto;
+}
+
+.drawing-canvas-container {
+  flex: 1; /* Take up the bottom half */
+  display: flex;
+  justify-content: center; /* Center the canvas horizontally */
+  align-items: center; /* Center the canvas vertically */
+  padding: 20px;
+}

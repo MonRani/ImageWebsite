@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack ImageGrid and DrawingCanvas vertically */
+  height: 100%;
+}
+
+.left {
+  flex: 1; /* Takes up half of the available height */
+  overflow-y: auto; /* Ensures scrolling if there are too many images */
+}
+
+.right {
+  flex: 1; /* Takes up the other half of the available height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack ImageGrid and DrawingCanvas vertically */
+  height: 100%;
+}
+
+.left {
+  flex: 1; /* Takes up half of the available height */
+  overflow-y: auto; /* Ensures scrolling if there are too many images */
+}
+
+.right {
+  flex: 1; /* Takes up the other half of the available height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
